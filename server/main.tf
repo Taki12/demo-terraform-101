@@ -54,15 +54,15 @@ resource "aws_instance" "web" {
     host        = self.public_ip
   }
 
-  provisioner "file" {
-    source      = "assets"
-    destination = "/tmp/"
-  }
+  #provisioner "file" {
+  #  source      = "assets"
+  #  destination = "/tmp/"
+  #}
 
-  provisioner "remote-exec" {
-    inline = [
-      "sudo sh /tmp/assets/setup-web.sh",
-    ]
-  }
+  #provisioner "remote-exec" {
+  #  inline = [
+  #    "sudo sh /tmp/assets/setup-web.sh",
+  #  ]
+  #}
 }
 
